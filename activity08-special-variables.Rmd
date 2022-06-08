@@ -1,6 +1,6 @@
 ---
 title: "Activity 8"
-author: "Name"
+author: "Jackie Fountain"
 output: github_document
 ---
 
@@ -11,7 +11,11 @@ Load the entirety of the `{tidyverse}`.
 If you wish to work with dates during this activity, you will need to also load `{lubridate}`.
 Be sure to avoid printing out any unnecessary information and give the code chunk a meaningful name.
 
+```{r load_packages, message=FALSE}
+knitr::opts_chunk$set(error = TRUE)
 
+library(tidyverse)
+```
 
 
 Cheatsheets that you might want to add to your collection:
@@ -25,6 +29,9 @@ Notice that this file is a tab-delimited file that is stored as a `.txt` file.
 Therefore, you will need to use either `read_delim` with a `delim = ...` argument or (better) `read_tsv` .
 Assign the file to a meaningful object name, be sure to avoid printing any unnecessary information, and give the code chunk a meaningful name.
 
+```{r load_data, message=FALSE}
+billboard_songs <- read_tsv(here::here("data","billboard_songs.txt"))
+```
 
 
 
